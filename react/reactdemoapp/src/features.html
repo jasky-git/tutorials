@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Features</title>
+  </head>
+  <body>
+    <!-- Introducing ES6 which is utilized by React.
+    Here we familirise with Classes, Arrow Functions and Variables (let, const, var) -->
+
+    <!-- <script type="text/babel">
+      class Hello extends React.Component {
+        render() {
+          return <h1>Hello World!</h1>
+        }
+      }
+    </script> -->
+
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <!-- Method in Class Car and Heritance where Extends to Model -->
+    <script>
+      class Car {
+        constructor(name) {
+          this.brand = name;
+        }
+
+        present() {
+          return 'I have a ' + this.brand;
+        }
+      }
+
+      class Model extends Car {
+        constructor(name, mod) {
+        //super() method refers to the parant class.
+          super(name);
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ', it is a ' + this.model
+        }
+      }
+
+      mycar = new Car("Ford");
+      document.write(mycar.present());
+      //I have a Ford
+
+      mycars = new Model("Ford", "Mustang");
+      //mycars.show();
+      document.write(mycars.show());
+      //I have a Ford, it is a Mustang
+    </script>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Existing Regular Function and the New Arrow Function -->
+    <script>
+        //Regular Function
+        hello = function() {
+            return "Hello World!";
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+
+        //Arrow Function
+        hello2 = () => {
+            return "Hello World!";
+        }
+
+        //if the function only return one statement and with a value
+        hello2 = () => "Hello World!";
+
+        document.getElementById("demo2").innerHTML = hello2();
+
+        //Arrow Function with Parameter
+        Hello3 = (val) => "Hello " + val;
+
+        //if there's only one parameter, enables you to skip Parantheses
+        Hello3 = val => "Hello " + val;
+
+        document.getElementById("demo3").innerHTML = hello3();
+    </script>
+
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Variables: 'var' vs 'let' vs 'const' -->
+    <script>
+        /*
+            If you use 'var' outside of a function, it belongs to the global scope.
+            If you use 'var' inside of a function, it belongs to that function.
+            If you use 'var' inside of a block, i.e. a for loop, the variable is still available outside of that block.
+        */
+
+        //var has a function scope, not a block scope.
+        var x = 5.6;
+        //let and const has a block scope. If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+        let y = 5.7;
+        //const is a variable that once it has been created, its value can never change.
+        const z = 5.8;
+    </script>
+  </body>
+</html>
