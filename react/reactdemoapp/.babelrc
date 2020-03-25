@@ -1,7 +1,4 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-proposal-numeric-separator"]
-}
-{
   "plugins": ["@babel/plugin-proposal-numeric-separator", "@babel/plugin-transform-literals"]
 }
