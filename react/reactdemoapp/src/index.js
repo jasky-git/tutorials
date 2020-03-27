@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 // import createReactClass from "create-react-class";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
+import Appl from './App';
 import TodoApp from 'components/TodoApp';
-import Fruits from 'components/Fruits';
+// import Stationary from 'components/Stationary';
+// import Fruits from 'components/Fruits';
 import MyNavbar from 'components/MyNavbar';
 import LikeButton from 'components/Like_button';
 import * as serviceWorker from './serviceWorker';
@@ -27,11 +28,30 @@ require("@babel/core").transform("code", {
 //const myelement = React.createElement('h1', {}, 'Hello React without JSX!');
 
 //With JSX
-const myfirstelement = <h1>Hello, This is an overview of React!</h1>;
+const myfirstelement = <div><h1>Hello, This is an overview of React!</h1><br></br>
+<h3>This tutorial will be covering these areas:</h3>
+<ul>
+  <li>Render HTML</li>
+  <li>JSX</li>
+  <li>Components</li>
+  <li>Brand</li>
+  <li>Props</li>
+  <li>State</li>
+  <li>Lifecycle</li>
+  <li>and Events</li>
+</ul>
+<p>
+<h5>Comment || Uncomment to check out each feature</h5>
+In Index.js and Index.html.
+</p>
+<hr></hr>
+</div>;
+
 ReactDOM.render(myfirstelement, document.getElementById('root'));
 
 
 //Appointing method to mysecondelement
+/*
 class Car {
   constructor(name) {
     this.brand = name;
@@ -77,11 +97,11 @@ const myfourthelement = <h3>React is {5 + 5} times better with JSX<hr></hr></h3>
 
 ReactDOM.render(myfourthelement, document.getElementById('fourthelement'));
 
-// const navigbar = <nav><h2>My Nav bar</h2></nav>;
-// ReactDOM.render(navigbar, document.getElementById('navig'));
+ReactDOM.render(<Appl />, document.getElementById('thirdcompele'));
 
 //Closing /> tag within input
 //const myfifthelement = <p>Name: <input id="name" type="text"/></p>;
+*/
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

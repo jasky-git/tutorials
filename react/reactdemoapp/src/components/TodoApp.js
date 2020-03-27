@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+//This TodoApp is develop without using JSX
 const e = React.createElement;
 var createReactClass = require('create-react-class');
-
 
 function TodoItem(props) {
 return e("li", null, props.text);
@@ -34,7 +34,7 @@ handleSubmit: function(evt) {
 
 render: function() {
     return e("div", null, [
-    e("h1", { key: "title" }, "To Do List"),
+    e("h4", { key: "title" }, "To Do List"),
     e("input", {
         key: "input",
         type: "text",
@@ -52,7 +52,8 @@ render: function() {
         this.state.items.map(item =>
         e(TodoItem, { key: item.id, text: item.text })
         )
-    )
+    ),
+    e("hr")
     ]);
 }
 });
