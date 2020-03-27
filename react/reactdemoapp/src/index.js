@@ -7,6 +7,7 @@ import Appl from './App';
 import TodoApp from 'components/TodoApp';
 // import Stationary from 'components/Stationary';
 // import Fruits from 'components/Fruits';
+import Fruitstate from 'components/Fruitstate';
 import MyNavbar from 'components/MyNavbar';
 import LikeButton from 'components/Like_button';
 import * as serviceWorker from './serviceWorker';
